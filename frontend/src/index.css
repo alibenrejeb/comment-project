@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;1,100&display=swap');
+
+body{
+  background-color: #F5F6FA;
+  font-family: "Poppins";
+  height: 1000px;
+}
+
+.rating-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.on {
+  color: orange;
+}
+
+.off {
+  color: #ccc;
+}
+
+.container{
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: auto;
+  padding: 10px;
+  
+}
+
+.card{
+  /* border: 1px solid yellow; */
+  padding: 5px 0 px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.vote{
+  grid-area: vote;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  background-color: #f5f6fa;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  margin-left: 5px;
+  width: 20px;
+  height: 80px;
+}
+
+.vote span{
+  font-weight: bold;
+  font-size: 16px;
+  color: #5357b7;
+
+}
+
+.plus , .minus{
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  content: "−";
+  color: rgb(137, 196, 216);
+}
+
+.userinfo{
+  grid-area: userinfo;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+  /* border: 1px solid black; */
+  padding:0 5px;
+}
+.replybtn{
+  margin-left: auto;
+  cursor: pointer;
+  color: #5357b7;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.username , .replyto{
+  font-size: 16px;
+  font-weight: bold;
+}
+.replyto{
+  color: #887ec5;
+}
+
+.text1{
+  grid-area: text1;
+  /* border: 1px solid black; */
+}
+
+.profileimg{
+  height: 35px;
+  width: 35px;
+  /* border: 1px solid black; */
+  border-radius: 20px;
+}
+.comment , .reply{
+  /* border: 1px solid gray; */
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr;
+  grid-template-areas: 
+  "vote userinfo userinfo "
+  "vote text1 text1 ";
+  row-gap: 3px;
+  column-gap: 10px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 3px #719ECE;
+
+}
+.comment:hover , .reply:hover{
+  box-shadow: 0 0 10px #719ECE;
+}
+
+.form:hover{
+  box-shadow: 0 0 10px #719ECE;
+}
+
+.reply{
+  /* border: 1px solid black; */
+  margin-left: 50px;
+  margin-right: 0;
+}
+
+.replies  {
+  border-left: 2px  dashed gray;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.replies .form{
+  margin-left: 50px;
+}
+
+.sendbtn{
+  margin-left: auto;
+}
+
+.form{
+  /* border: 1px  solid black; */
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  column-gap: 15px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-top: 15px;
+  /* margin-bottom: 5px; */
+  box-shadow: 0 0 5px #719ECE;
+}
+
+
+.myinput{
+  resize: none;
+  flex : 1 ;
+  height: 90px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid rgb(207, 201, 201);
+  cursor: pointer;
+}
+
+.myinput:focus {
+  outline: none ;
+  border:1px solid rgb(207, 201, 201);;
+  box-shadow: 0 0 10px #719ECE;
+}
+
+.sendbtn{
+  background-color: #5357b7;
+  border: none;
+  color: #ffffff;
+  font-size: 20px;
+  height: 50px;
+  width: 100px;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.sendbtn:hover , .replybtn:hover{
+  opacity: 0.4;
+}
+
+.form .profileimg{
+  height: 40px;
+  width: 40px;
+}
+
+.you {
+  background-color:#5357b7;
+  color:#ffffff ;
+  padding: 2px 5px;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.editstuff{
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.delete , .edit{
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 15px;
+  cursor: pointer;
+
+}
+
+.delete{
+  display: flex;
+  align-items: center;
+  color:rgb(235, 104, 104) ;
+}
+
+.edit{
+  display: flex;
+  align-items: center;
+  color: #6e6ee7;
+}
+
+.delete:hover , .edit:hover{
+  opacity: 0.4;
+}
+
+.notification{
+  font-size: 16px;
+  position: fixed;
+  z-index: 1000;
+  width: 60%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 10px;
+  left: 2rem;
+  right: 2rem;
+  top: 3rem ;
+  text-align: center;
+}
+
+.notification span{
+  font-weight: bold;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    background-color: #f4f4f4;
+  }
+
+  .notification{
+    font-size: 16px;
+    position: fixed;
+    margin: 0;
+    width: 80%;
+    z-index: 1000;
+    border-radius: 10px;
+    padding: 10px;
+    left: 1.8rem;
+    top: 1rem;
+    text-align: center;
+  }
+
+  .notification span{
+    font-weight: bold;
+  }
+
+  .content{
+    font-size: 15px;
+  }
+
+  .container{
+    width: 95%;
+    margin: 0;
+  }
+
+  .comment , .reply{
+    grid-template-areas: "userinfo userinfo userinfo"
+    "text1 text1 text1 "
+    "vote vote vote";
+    padding: 10px ;
+    position: relative ;
+  }
+
+  .replybtn , .editstuff{
+    position: absolute;
+    right: 1rem;
+    bottom: 1.5rem ;
+    font-size: 18px;
+  }
+
+  .reply{
+    margin: 0;
+  }
+  .replies{
+    padding: 0;
+    padding-left: 5px;
+    margin: 0;
+    border-radius: 20px;
+    margin-top: 3px;
+  }
+
+  .vote{
+    height: 30px;
+    width: 80px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+
+  .myinput{
+    box-shadow: none;
+  }
+
+
+
+  .form .profileimg{grid-area: image; margin-top: 3px;}
+  .form .myinput{grid-area: input;}
+  .form .sendbtn{grid-area: sendbtn;margin-left: auto;}
+  .form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "input input "
+    "image sendbtn" ;
+    row-gap: 10px;
+  }
+
+
+  
+}
